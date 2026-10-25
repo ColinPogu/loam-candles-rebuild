@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loam Candles | Coconut and Soy Candles for a Loam Grown Life</title>
+<meta name="description" content="Loam Candles makes coconut and soy wax candles, hand poured in small batches and inspired by a life lived in the garden. Shop Community Garden, Herb Bed, Citrus Season and more.">
+<meta property="og:title" content="Loam Candles | Coconut and Soy Candles for a Loam Grown Life">
+<meta property="og:description" content="Hand poured coconut and soy wax candles inspired by a loam grown life. Garden fresh scents, made by hand.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f6efe2;
+    --bg-warm: #efe4d1;
+    --cream: #fffdf8;
+    --ink: #2d2820;
+    --ink-soft: #5e5446;
+    --ink-faint: #8a7f6d;
+    --line: #e3d8c2;
+    --clay: #b65f3b;
+    --clay-dark: #9a4d2c;
+    --garden: #5f7a4a;
+    --garden-deep: #46603a;
+    --gold: #cf9b3c;
+    --plum: #4b4066;
+    --russet: #8a5636;
+    --sea: #3f7d7a;
+    --shadow: 0 18px 40px -22px rgba(45,40,32,.5);
+    --radius: 18px;
+    --maxw: 1160px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Nunito Sans', system-ui, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces', Georgia, serif; font-weight:500; line-height:1.12; letter-spacing:-.01em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:.5rem;
+    background:var(--clay); color:var(--cream);
+    border:none; border-radius:999px;
+    padding:.85rem 1.6rem; font-family:'Nunito Sans',sans-serif;
+    font-weight:700; font-size:.98rem; letter-spacing:.01em;
+    cursor:pointer; text-decoration:none;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .btn:hover{background:var(--clay-dark); transform:translateY(-1px);}
+  .btn-ghost{
+    background:transparent; color:var(--ink);
+    border:1.5px solid var(--ink);
+  }
+  .btn-ghost:hover{background:var(--ink); color:var(--cream);}
+  .eyebrow{
+    text-transform:uppercase; letter-spacing:.22em; font-size:.72rem;
+    font-weight:700; color:var(--clay);
+  }
+
+  /* announcement */
+  .announce{
+    background:var(--garden-deep); color:#f2efe2;
+    text-align:center; font-size:.82rem; letter-spacing:.08em;
+    text-transform:uppercase; padding:.55rem 16px; font-weight:600;
+  }
+
+  /* nav */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,239,226,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:.9rem 24px; max-width:var(--maxw); margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:.65rem; text-decoration:none;}
+  .brand-mark{
+    width:38px; height:38px; border-radius:50%;
+    background:radial-gradient(circle at 50% 35%, #f6d79a, var(--clay) 70%);
+    display:grid; place-items:center; flex:none;
+    box-shadow:inset 0 -3px 8px rgba(0,0,0,.15);
+  }
+  .brand-mark span{
+    display:block; width:7px; height:13px; border-radius:50% 50% 45% 45%;
+    background:linear-gradient(#fff6df,#f4b63f 60%,#e07b2e);
+    box-shadow:0 0 10px 3px rgba(240,150,60,.6);
+  }
+  .brand-name{font-family:'Fraunces',serif; font-size:1.35rem; font-weight:600; letter-spacing:-.01em;}
+  .brand-sub{font-size:.62rem; text-transform:uppercase; letter-spacing:.3em; color:var(--ink-faint); margin-top:-3px;}
+  .nav-links{display:flex; align-items:center; gap:1.9rem; list-style:none; margin:0; padding:0;}
+  .nav-links a{text-decoration:none; font-weight:600; font-size:.95rem; color:var(--ink-soft); transition:color .15s;}
+  .nav-links a:hover{color:var(--clay);}
+  .nav-cta{margin-left:.4rem;}
+
+  /* hero */
+  .hero{position:relative; overflow:hidden;}
+  .hero-inner{
+    display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center;
+    padding:72px 0 64px;
+  }
+  .hero h1{font-size:clamp(2.6rem, 5vw, 4.1rem); margin:.6rem 0 1rem;}
+  .hero h1 em{font-style:italic; color:var(--clay);}
+  .hero p.lede{font-size:1.14rem; color:var(--ink-soft); max-width:30rem; margin:0 0 1.9rem;}
+  .hero-ctas{display:flex; gap:.9rem; flex-wrap:wrap;}
+  .hero-trust{margin-top:1.8rem; font-size:.9rem; color:var(--ink-faint); display:flex; gap:1.4rem; flex-wrap:wrap;}
+  .hero-trust b{color:var(--ink-soft); font-weight:700;}
+
+  .hero-art{
+    position:relative; border-radius:28px; min-height:420px;
+    background:
+      radial-gradient(120% 90% at 70% 15%, #f7e4bd 0%, rgba(247,228,189,0) 55%),
+      linear-gradient(160deg, #e9d9bd 0%, #d9c3a0 55%, #cdb389 100%);
+    box-shadow:var(--shadow);
+    display:grid; place-items:end center; overflow:hidden;
+    padding-bottom:0;
+  }
+  .hero-art .sun{
+    position:absolute; top:52px; right:62px; width:120px; height:120px; border-radius:50%;
+    background:radial-gradient(circle, #fce9b8, #f3c75d 65%, rgba(243,199,93,0) 72%);
+    filter:blur(1px);
+  }
+  .hero-art .hillside{
+    position:absolute; left:0; right:0; bottom:0; height:46%;
+    background:linear-gradient(180deg, #7e9158, #5f7a4a 60%, #4c6539);
+    border-radius:60% 55% 0 0 / 30% 30% 0 0;
+  }
+  /* candle illustration (CSS only) */
+  .candle{position:relative; z-index:2; margin-bottom:9%;}
+  .candle .flame{
+    width:18px; height:34px; margin:0 auto 4px;
+    background:linear-gradient(#fff7e2,#f6c04a 55%,#e8792b);
+    border-radius:50% 50% 48% 48% / 65% 65% 40% 40%;
+    box-shadow:0 0 24px 8px rgba(243,170,70,.55);
+    animation:flicker 2.6s ease-in-out infinite;
+    transform-origin:bottom center;
+  }
+  @keyframes flicker{0%,100%{transform:scale(1) rotate(-1deg);}50%{transform:scale(1.06,1.02) rotate(1.5deg);}}
+  @media (prefers-reduced-motion: reduce){.candle .flame{animation:none;}}
+  .candle .jar{
+    width:150px; height:140px; border-radius:16px 16px 20px 20px;
+    background:linear-gradient(170deg, #f3ede1 0%, #e7ddc9 100%);
+    border:1px solid rgba(0,0,0,.06);
+    box-shadow:inset 0 -12px 24px rgba(0,0,0,.08), var(--shadow);
+    position:relative; overflow:hidden;
+  }
+  .candle .wax{position:absolute; left:0; right:0; top:0; height:26px; background:linear-gradient(#efe6d3,#e4d8bf);}
+  .candle .label{
+    position:absolute; left:50%; top:52%; transform:translate(-50%,-50%);
+    width:78%; padding:.5rem .3rem; text-align:center; border-radius:8px;
+    background:rgba(255,253,248,.92); border:1px solid rgba(0,0,0,.05);
+  }
+  .candle .label .lb-brand{font-family:'Fraunces',serif; font-size:.9rem; color:var(--ink);}
+  .candle .label .lb-sc{font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; color:var(--clay); font-weight:700;}
+
+  /* section shells */
+  section{padding:76px 0;}
+  .section-head{text-align:center; max-width:34rem; margin:0 auto 46px;}
+  .section-head h2{font-size:clamp(2rem,3.5vw,2.8rem); margin:.5rem 0 .6rem;}
+  .section-head p{color:var(--ink-soft); font-size:1.05rem; margin:0;}
+
+  .tint-warm{background:var(--bg-warm);}
+
+  /* product grid */
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .card{
+    background:var(--cream); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .card-art{
+    height:188px; position:relative; display:grid; place-items:center;
+    background:var(--c-bg, #e9ddc6);
+  }
+  .card-art .mini-candle{
+    width:72px; height:84px; border-radius:10px 10px 12px 12px;
+    background:linear-gradient(170deg,#fffdf8,#f0e8d8);
+    box-shadow:inset 0 -8px 16px rgba(0,0,0,.08), 0 10px 20px -12px rgba(0,0,0,.4);
+    position:relative;
+  }
+  .card-art .mini-candle::before{
+    content:""; position:absolute; left:50%; top:-16px; transform:translateX(-50%);
+    width:12px; height:22px; border-radius:50% 50% 48% 48%/65% 65% 40% 40%;
+    background:linear-gradient(#fff7e2,#f6c04a 55%,#e8792b);
+    box-shadow:0 0 16px 5px rgba(243,170,70,.5);
+  }
+  .card-art .mini-candle::after{
+    content:attr(data-sc); position:absolute; left:50%; top:52%; transform:translate(-50%,-50%);
+    width:80%; text-align:center; font-size:.5rem; letter-spacing:.14em; text-transform:uppercase;
+    font-weight:700; color:var(--c-ink, #6a5a3c); line-height:1.2;
+    font-family:'Nunito Sans',sans-serif;
+  }
+  .card-art .badge{
+    position:absolute; top:12px; left:12px; background:var(--ink); color:var(--cream);
+    font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+    padding:.3rem .6rem; border-radius:999px;
+  }
+  .card-body{padding:1.3rem 1.3rem 1.5rem; display:flex; flex-direction:column; flex:1;}
+  .card-body h3{font-size:1.4rem; margin:0 0 .35rem;}
+  .chips{display:flex; flex-wrap:wrap; gap:.35rem; margin:0 0 .7rem;}
+  .chip{font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; font-weight:700; color:var(--c-ink,#6a5a3c); background:var(--c-chip,#efe6d3); padding:.22rem .55rem; border-radius:999px;}
+  .card-body p.desc{font-size:.93rem; color:var(--ink-soft); margin:0 0 1.1rem; flex:1;}
+  .card-foot{display:flex; align-items:center; justify-content:space-between; gap:1rem;}
+  .price{font-family:'Fraunces',serif; font-size:1.25rem; color:var(--ink);}
+  .price small{font-size:.72rem; font-family:'Nunito Sans',sans-serif; color:var(--ink-faint); font-weight:600;}
+  .card .btn{padding:.6rem 1.15rem; font-size:.88rem;}
+  .card.soldout .btn{background:transparent; color:var(--ink-faint); border:1.5px solid var(--line); cursor:default;}
+  .card.soldout .btn:hover{transform:none;}
+
+  /* scent accent themes */
+  .t-garden{--c-bg:#dfe7cf; --c-ink:#46603a; --c-chip:#d2dcbd;}
+  .t-herb{--c-bg:#e0e4cf; --c-ink:#5c6a44; --c-chip:#d2d9bd;}
+  .t-citrus{--c-bg:#f3e7c2; --c-ink:#9a7420; --c-chip:#eeddb0;}
+  .t-moon{--c-bg:#ddd8e6; --c-ink:#4b4066; --c-chip:#d2cbe0;}
+  .t-harvest{--c-bg:#ead9c4; --c-ink:#8a5636; --c-chip:#e0cab0;}
+  .t-cabin{--c-bg:#dde2e1; --c-ink:#3f5a57; --c-chip:#cfd9d7;}
+
+  .shop-all{text-align:center; margin-top:44px;}
+
+  /* feature strip (Scenic Route) */
+  .feature{
+    display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch;
+    border-radius:26px; overflow:hidden; box-shadow:var(--shadow); background:var(--cream);
+  }
+  .feature-art{
+    min-height:360px; position:relative; display:grid; place-items:center;
+    background:
+      radial-gradient(90% 70% at 30% 20%, #fbe8bd 0%, rgba(251,232,189,0) 60%),
+      linear-gradient(165deg, #cfe0dd 0%, #9dc0bb 55%, #6fa39b 100%);
+  }
+  .feature-art .fc{
+    width:118px; height:132px; border-radius:14px; background:linear-gradient(170deg,#fffdf8,#ede4d3);
+    box-shadow:inset 0 -10px 22px rgba(0,0,0,.08), var(--shadow); position:relative;
+  }
+  .feature-art .fc::before{content:""; position:absolute; left:50%; top:-20px; transform:translateX(-50%); width:15px; height:28px; border-radius:50% 50% 48% 48%/65% 65% 40% 40%; background:linear-gradient(#fff7e2,#f6c04a 55%,#e8792b); box-shadow:0 0 20px 6px rgba(243,170,70,.5);}
+  .feature-art .fc::after{content:"SCENIC ROUTE"; position:absolute; left:50%; top:52%; transform:translate(-50%,-50%); width:84%; text-align:center; font-size:.6rem; letter-spacing:.16em; font-weight:700; color:var(--sea);}
+  .feature-copy{padding:48px 44px; display:flex; flex-direction:column; justify-content:center;}
+  .feature-copy h2{font-size:2.3rem; margin:.4rem 0 .7rem;}
+  .feature-copy p{color:var(--ink-soft); font-size:1.08rem; margin:0 0 1.6rem;}
+
+  /* newsletter */
+  .news{
+    background:linear-gradient(160deg,#50684a,#3b5038); color:#f3efe2;
+    border-radius:26px; padding:56px 44px; text-align:center; position:relative; overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .news::before{content:""; position:absolute; width:260px; height:260px; border-radius:50%; background:radial-gradient(circle,#f3c75d55,transparent 70%); top:-80px; right:-40px;}
+  .news .eyebrow{color:#e9c877;}
+  .news h2{color:#fffdf5; font-size:clamp(1.9rem,3.5vw,2.6rem); margin:.5rem auto .7rem; max-width:22ch;}
+  .news p{color:#e4ddc9; max-width:40rem; margin:0 auto 1.9rem; font-size:1.05rem;}
+  .news-form{display:flex; gap:.7rem; max-width:30rem; margin:0 auto; flex-wrap:wrap; justify-content:center;}
+  .news-form input{
+    flex:1; min-width:220px; padding:.95rem 1.1rem; border-radius:999px; border:none;
+    font-family:'Nunito Sans',sans-serif; font-size:1rem; color:var(--ink); background:#fffdf8;
+  }
+  .news-form input:focus{outline:3px solid #e9c87755;}
+  .news-form .btn{background:var(--clay); white-space:nowrap;}
+  .news-form .btn:hover{background:var(--clay-dark);}
+  .news-fine{margin-top:1.1rem; font-size:.82rem; color:#cfc7b1;}
+  .news-success{display:none; max-width:30rem; margin:0 auto; background:rgba(255,253,245,.12); border:1px solid rgba(255,253,245,.3); border-radius:16px; padding:1.1rem 1.3rem; font-size:1.02rem; color:#fffdf5;}
+  .news-success.show{display:block;}
+  .news-success b{color:#f0d488;}
+
+  /* about / made by hand */
+  .about{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .about-art{
+    min-height:340px; border-radius:24px; position:relative; overflow:hidden; box-shadow:var(--shadow);
+    background:
+      radial-gradient(80% 60% at 70% 20%, #f7e6bf 0%, rgba(247,230,191,0) 55%),
+      linear-gradient(165deg,#e6d7bb,#cbb389 70%,#b89a6d);
+  }
+  .about-art .soil{position:absolute; left:0; right:0; bottom:0; height:40%; background:linear-gradient(#7a5436,#5c3e28); border-radius:50% 50% 0 0/22% 22% 0 0;}
+  .about-art .sprout{position:absolute; left:50%; bottom:26%; transform:translateX(-50%); width:6px; height:70px; background:var(--garden); border-radius:4px;}
+  .about-art .sprout::before,.about-art .sprout::after{content:""; position:absolute; width:34px; height:22px; background:var(--garden); border-radius:0 80% 0 80%;}
+  .about-art .sprout::before{left:-32px; top:6px; transform:rotate(-8deg);}
+  .about-art .sprout::after{right:-32px; top:20px; transform:scaleX(-1) rotate(-8deg);}
+  .about h2{font-size:2.3rem; margin:.4rem 0 .9rem;}
+  .about p{color:var(--ink-soft); font-size:1.06rem; margin:0 0 1rem;}
+  .about .facts{display:flex; gap:2rem; margin-top:1.4rem; flex-wrap:wrap;}
+  .fact b{display:block; font-family:'Fraunces',serif; font-size:1.5rem; color:var(--garden-deep);}
+  .fact span{font-size:.85rem; color:var(--ink-faint);}
+
+  /* footer */
+  footer{background:#2d2820; color:#e9e1d1; padding:60px 0 34px;}
+  .foot-top{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:40px;}
+  footer .brand-name{color:#fffdf5;}
+  footer p{color:#b7ac98; font-size:.95rem; max-width:24rem;}
+  footer h4{font-family:'Nunito Sans',sans-serif; text-transform:uppercase; letter-spacing:.14em; font-size:.78rem; color:#cabf9d; margin:.2rem 0 1rem;}
+  footer ul{list-style:none; margin:0; padding:0;}
+  footer ul li{margin-bottom:.6rem;}
+  footer ul a{color:#d7cdba; text-decoration:none; font-size:.95rem;}
+  footer ul a:hover{color:#fffdf5;}
+  .foot-bottom{border-top:1px solid #453e31; padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; color:#9c927d; font-size:.85rem;}
+
+  /* responsive */
+  @media (max-width: 920px){
+    .hero-inner{grid-template-columns:1fr; gap:36px;}
+    .hero-art{min-height:340px;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .feature, .about{grid-template-columns:1fr;}
+    .feature-art{min-height:260px;}
+    .foot-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none;}
+    section{padding:56px 0;}
+    .grid{grid-template-columns:1fr;}
+    .news{padding:44px 22px;}
+    .about-art{min-height:260px;}
+    .foot-top{grid-template-columns:1fr;}
+    .hero h1{font-size:2.4rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">Coconut and soy wax, hand poured in small batches</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Loam Candles home">
+      <span class="brand-mark"><span></span></span>
+      <span>
+        <span class="brand-name">Loam Candles</span>
+        <span class="brand-sub">A loam grown life</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#scents">Our Scents</a></li>
+        <li><a href="#scenic">Scenic Route</a></li>
+        <li><a href="#about">Our Roots</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li class="nav-cta"><a class="btn" href="#scents">Shop Candles</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Home fragrance, grown from the garden</span>
+      <h1>Scents for a <em>loam grown</em> life.</h1>
+      <p class="lede">Loam is the perfect mix of sand, silt and clay, a gardener's dream building block for vibrant plant life. Our coconut and soy candles bottle that feeling, the hum of a garden in full bloom, poured by hand in small batches.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#scents">Shop our scents</a>
+        <a class="btn btn-ghost" href="#about">Meet Loam</a>
+      </div>
+      <div class="hero-trust">
+        <span><b>Coconut and soy wax</b> clean burning</span>
+        <span><b>Hand poured</b> in small batches</span>
+        <span><b>$36</b> each</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="sun"></span>
+      <span class="hillside"></span>
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="jar">
+          <div class="wax"></div>
+          <div class="label">
+            <div class="lb-brand">Loam</div>
+            <div class="lb-sc">Community Garden</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scents" class="tint-warm">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our core scents</span>
+      <h2>Five scents, straight from the garden</h2>
+      <p>Each one is a coconut and soy wax candle, hand poured and priced at $36. Tap a scent to bring it home.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card t-garden">
+        <div class="card-art"><div class="mini-candle" data-sc="Community Garden"></div></div>
+        <div class="card-body">
+          <h3>Community Garden</h3>
+          <div class="chips"><span class="chip">green</span><span class="chip">fresh</span><span class="chip">bright</span><span class="chip">zesty</span></div>
+          <p class="desc">Freshly pruned tomato leaves, fig nectar warmed by the July sun, interplanted marigolds, a job well done. Vegetal greens and zingy fruits in full bloom.</p>
+          <div class="card-foot">
+            <span class="price">$36 <small>coconut and soy</small></span>
+            <a class="btn" href="#newsletter">Shop</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card t-herb">
+        <div class="card-art"><div class="mini-candle" data-sc="Herb Bed"></div></div>
+        <div class="card-body">
+          <h3>Herb Bed</h3>
+          <div class="chips"><span class="chip">herbal</span><span class="chip">meditative</span><span class="chip">calming</span><span class="chip">warm</span></div>
+          <p class="desc">Bundles of shrubby branches, fragrant and sticky hands, a kitchen filled with the freshness of the earth. Airy lavender, hazy tobacco and dry sage.</p>
+          <div class="card-foot">
+            <span class="price">$36 <small>coconut and soy</small></span>
+            <a class="btn" href="#newsletter">Shop</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card t-citrus">
+        <div class="card-art"><div class="mini-candle" data-sc="Citrus Season"></div></div>
+        <div class="card-body">
+          <h3>Citrus Season</h3>
+          <div class="chips"><span class="chip">floral</span><span class="chip">warm</span><span class="chip">bright</span><span class="chip">uplifting</span></div>
+          <p class="desc">Delicate neroli blossoms dot the plumes of waxy green citrus leaves. A balance of floral nectar with hints of bright citrus zest, warmed under an early spring sun.</p>
+          <div class="card-foot">
+            <span class="price">$36 <small>coconut and soy</small></span>
+            <a class="btn" href="#newsletter">Shop</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card t-moon soldout">
+        <div class="card-art"><span class="badge">Restocking soon</span><div class="mini-candle" data-sc="Midnight Moon"></div></div>
+        <div class="card-body">
+          <h3>Midnight Moon</h3>
+          <div class="chips"><span class="chip">sultry</span><span class="chip">floral</span><span class="chip">warm</span><span class="chip">sweet spicy</span></div>
+          <p class="desc">For all nighters, long phone calls with someone you love, a book so good you lose sleep. Aromatic cardamom and clove, musky patchouli and oud, hints of rose.</p>
+          <div class="card-foot">
+            <span class="price">$36 <small>coconut and soy</small></span>
+            <a class="btn" href="#newsletter">Notify me</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card t-harvest">
+        <div class="card-art"><div class="mini-candle" data-sc="Harvest Basket"></div></div>
+        <div class="card-body">
+          <h3>Harvest Basket</h3>
+          <div class="chips"><span class="chip">leathery</span><span class="chip">earthy</span><span class="chip">deep</span><span class="chip">musky</span></div>
+          <p class="desc">For when the long days of summer come to an end and plant production winds down. Warm, musky and earthy, a scent to celebrate the growing season's gifts.</p>
+          <div class="card-foot">
+            <span class="price">$36 <small>coconut and soy</small></span>
+            <a class="btn" href="#newsletter">Shop</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card t-cabin soldout">
+        <div class="card-art"><span class="badge">Restocking soon</span><div class="mini-candle" data-sc="Weekend Cabin"></div></div>
+        <div class="card-body">
+          <h3>Weekend Cabin</h3>
+          <div class="chips"><span class="chip">cozy</span><span class="chip">woody</span><span class="chip">warm</span></div>
+          <p class="desc">A fan favorite that keeps selling out. Join the Loam list below and we will let you know the moment it is poured again.</p>
+          <div class="card-foot">
+            <span class="price">$36 <small>coconut and soy</small></span>
+            <a class="btn" href="#newsletter">Notify me</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div class="shop-all"><a class="btn btn-ghost" href="#newsletter">See the full collection</a></div>
+  </div>
+</section>
+
+<section id="scenic">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-art" aria-hidden="true"><div class="fc"></div></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Featured scent</span>
+        <h2>Scenic Route</h2>
+        <p>Reminiscent of long days in the sun, fresh air, and drives along the sea. The one to light when you want the whole room to take the long way home.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#newsletter">Shop Scenic Route</a>
+          <span class="price" style="align-self:center;">$36</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter" class="tint-warm">
+  <div class="wrap">
+    <div class="news">
+      <span class="eyebrow">Join the Loam list</span>
+      <h2>Be first for new scents and restocks</h2>
+      <p>Our small batches sell out, and favorites like Weekend Cabin and Midnight Moon come and go. Drop your email and we will let you know the moment a new scent is poured or a sold out one comes back.</p>
+      <form class="news-form" id="newsForm" novalidate>
+        <label for="newsEmail" style="position:absolute;left:-9999px;">Email address</label>
+        <input type="email" id="newsEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn" type="submit">Keep me posted</button>
+      </form>
+      <p class="news-fine">No spam, just new scents and restock alerts. Unsubscribe any time.</p>
+      <div class="news-success" id="newsSuccess" role="status" aria-live="polite">
+        <b>You are on the list.</b> We will email you the moment a new scent is poured or a sold out favorite comes back.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="about-art" aria-hidden="true">
+      <span class="sprout"></span>
+      <span class="soil"></span>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">Our roots</span>
+      <h2>Homegrown and handmade</h2>
+      <p>Loam Candles is a home fragrance company inspired by a life lived outdoors and experienced through the natural world. Every scent is made in honor and celebration of a loam grown life.</p>
+      <p>We pour coconut and soy wax by hand, in small batches, so each candle carries a little of the garden it came from.</p>
+      <div class="facts">
+        <div class="fact"><b>Coconut and soy</b><span>clean, slow burning wax</span></div>
+        <div class="fact"><b>Hand poured</b><span>in small batches</span></div>
+        <div class="fact"><b>$36</b><span>every scent, one price</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:1rem;">
+          <span class="brand-mark"><span></span></span>
+          <span><span class="brand-name">Loam Candles</span><span class="brand-sub" style="color:#9c927d;">A loam grown life</span></span>
+        </a>
+        <p>Coconut and soy wax candles inspired by life lived in the garden and experienced through the natural world. Homegrown and handmade.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#scents">Community Garden</a></li>
+          <li><a href="#scents">Herb Bed</a></li>
+          <li><a href="#scents">Citrus Season</a></li>
+          <li><a href="#scenic">Scenic Route</a></li>
+          <li><a href="#scents">Harvest Basket</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Loam</h4>
+        <ul>
+          <li><a href="#about">Our Roots</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="#scents">All Candles</a></li>
+          <li><a href="#top">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Loam Candles. All rights reserved.</span>
+      <span>Hand poured with care.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var form = document.getElementById('newsForm');
+    var email = document.getElementById('newsEmail');
+    var success = document.getElementById('newsSuccess');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var val = (email.value || '').trim();
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      if(!ok){
+        email.focus();
+        email.style.outline = '3px solid #e2724a';
+        return;
+      }
+      form.style.display = 'none';
+      success.classList.add('show');
+    });
+    email.addEventListener('input', function(){ email.style.outline = 'none'; });
+  })();
+</script>
+
+</body>
+</html>
